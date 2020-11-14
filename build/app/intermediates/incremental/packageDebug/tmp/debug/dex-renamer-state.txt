@@ -1,0 +1,4 @@
+#Fri Oct 30 01:00:55 CST 2020
+base.0=/home/thalia/Proyects-Flutter/practica2/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
