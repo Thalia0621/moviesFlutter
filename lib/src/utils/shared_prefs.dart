@@ -18,7 +18,6 @@ class SharedPrefs {
       return value;
     }
 
-
 //Método que borra las preferencias guardadas
     Future < bool > removePref() async {
       final SharedPreferences preferences = await SharedPreferences.getInstance();

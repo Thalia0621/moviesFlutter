@@ -15,13 +15,19 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
+   
+
   ApiLogin httpLogin=ApiLogin();
   SharedPrefs sharedPrefs = SharedPrefs();
   bool isValidating=false; //Variable para controlar la visualización del indicador de progreso
   @override
   Widget build(BuildContext context) {
-    TextEditingController txtUser=TextEditingController();
+
+    TextEditingController txtUser=TextEditingController(text: "16030620@itcelaya.edu.mx" );
     TextEditingController txtPass=TextEditingController();
+   
+  
+  
  final checked=CheckboxListTile(
       title: Text('Stay signed in?'),
       secondary: Icon(Icons.account_box), activeColor: Configuration.colorapp,
@@ -84,6 +90,8 @@ class _LoginState extends State<Login> {
           );
         }   
         });
+        print(txtUser.text);
+        await sharedPrefs.setString("email", txtUser.text);
         if(checked.value)
         await sharedPrefs.setString("token", "user"); //Guarda la clave y su valor
           Navigator.pop(context);

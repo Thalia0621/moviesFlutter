@@ -12,6 +12,8 @@ WidgetsFlutterBinding.ensureInitialized();
 SharedPrefs preferences=SharedPrefs();
 //Se encarga de leer los datos almanecnados, a través de la clave
 String value=await preferences.getString("token");
+//String u=await preferences.getString("email");
+//print('(**************************'+u);
 //Si el valor está presente hay una sesión iniciada, y nos enviará al Dashboard
 //Si no enviará un valor null y nos enviará a uniciar sesión. 
   runApp(value!=null?SingInApp():MyApp());
